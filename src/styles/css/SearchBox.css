@@ -1,0 +1,25 @@
+.searchBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  background-color: #FFE600;
+  height: 5vh;
+}
+.searchBox .input-container {
+  width: 50%;
+}
+.searchBox .input-container .input-item {
+  width: 100%;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  height: 3vh;
+}
+.searchBox .input-container .input-item::placeholder {
+  color: #999999;
+  padding: 1em;
+}
+
+/*# sourceMappingURL=SearchBox.css.map */
