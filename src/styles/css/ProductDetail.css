@@ -1,0 +1,50 @@
+.product-id-view {
+  background-color: white;
+}
+.product-id-view .product-detail-content {
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+}
+.product-id-view .product-detail-content .product-detail-img {
+  width: 100%;
+}
+.product-id-view .product-detail-content .product-detail-img img {
+  width: 100%;
+}
+.product-id-view .product-detail-content .product-detail-header {
+  display: flex;
+  flex-direction: column;
+}
+.product-id-view .product-detail-content .product-detail-header .product-detail-conditions {
+  font-size: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.product-id-view .product-detail-content .product-detail-header .product-detail-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.product-id-view .product-detail-content .product-detail-header .product-detail-amount {
+  font-weight: 500;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+.product-id-view .product-detail-content .product-detail-header .btn-container {
+  height: 10vh;
+}
+.product-id-view .product-detail-content .product-detail-header .btn-container .product-purchase {
+  border: none;
+  border-radius: 5px;
+  background-color: #3483FA;
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  height: 40%;
+}
+.product-id-view .product-description .product-description-title {
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=ProductDetail.css.map */
