@@ -1,0 +1,19 @@
+$breadcrumb-color: #666666;
+
+.breadCrumbs {
+    font-size: 12px;
+    color: $breadcrumb-color;
+
+    .breadCrumbs-content {
+        margin-left: 8px;
+
+        .category-name {
+            padding: 2px;
+        }
+
+        span+span::before {
+            margin: 2px;
+            content: '>'
+        }
+    }
+}
