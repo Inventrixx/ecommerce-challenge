@@ -1,0 +1,27 @@
+.product-content {
+  display: flex;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: white;
+  cursor: pointer;
+  border-bottom: #dadada;
+}
+.product-content .product-img-container {
+  margin-right: 8px;
+}
+.product-content .product-header {
+  margin-right: 8px;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+.product-content .product-header .product-price {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+.product-content .product-header .product-title {
+  margin-top: 8px;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=ProductsList.css.map */
