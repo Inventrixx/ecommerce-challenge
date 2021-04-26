@@ -1,31 +1,89 @@
-$yellow: #FFE600;
+$navbar-bg: #FFE600;
 $placeholderText: #999999;
+$search-icon-bg: #EEEEEE;
+$shadow: rgba(0, 0, 0, .1);
+$small: 300px;
+$medium: 900px;
 
-.searchBox {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    background-color: $yellow;
-    height: 5vh;
 
-    .input-container {
-        width: 50%;
+@media screen and (min-width: $small) {
 
-        .input-item {
-            width: 100%;
-            -webkit-appearance: none;
-            outline: none;
-            border: none;
-            height: 3vh;
 
-            &::placeholder {
-                color: $placeholderText;
-                padding: 1em;
-            }
+
+    .navbar-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        background-color: $navbar-bg;
+        height: 6vh;
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
         }
-    }
 
+        .logo-item {
+            width: 50%;
+        }
+
+
+        .input-container {
+            width: 100%;
+            margin-left: 5px;
+            display: flex;
+
+
+            .searchbox-form {
+                width: 75%;
+                box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+
+
+                .input-item {
+                    -webkit-appearance: none;
+                    outline: none;
+                    border: none;
+                    line-height: 10pt;
+                    padding-top: 5px;
+                    padding-bottom: 7px;
+                    padding-left: 15px;
+                    font-size: 1em;
+                    height: 4vh;
+                    width: 100%;
+
+
+                    &::placeholder {
+                        color: $placeholderText;
+                    }
+                }
+            }
+
+            .search-icon-container {
+                width: 10%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                background-color: $search-icon-bg;
+                box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+
+                .search-icon-button {
+                    border: none;
+
+
+                    .search-icon {
+                        width: 35%;
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
+
+    }
 
 }
