@@ -4,18 +4,22 @@ const axios = require("axios");
 exports.search = async (req, res) => {
   try {
 
-    const itemSearch = req.query.q;
+    const itemsSearch = req.query.q;
     const resp = await axios.get(
-      `${process.env.API_MERCADO_LIBRE}/sites/MLA/search?limit=${process.env.SEARCH_LIMIT}&q=${itemSearch}`
+      `${process.env.API_MERCADO_LIBRE}/sites/MLA/search?limit=${process.env.SEARCH_LIMIT}&q=${itemsSearch}`
     );
 
     const respCategories = resp.data.filters.find(category => category.id === 'category')
     const allCategories = respCategories.values[0].path_from_root.map(values => values.name)
 
-
     const respDataItems = resp.data.results.map((item) => ({
       id: item.id,
       title: item.title,
+      price: {
+        currency: item.currency_id,
+        amount: item.price,
+        decimals: 0
+      },
       picture: item.thumbnail,
       condition: item.condition,
       free_shipping: item.shipping.free_shipping,
@@ -29,9 +33,9 @@ exports.search = async (req, res) => {
       categories: allCategories,
       items: [...respDataItems],
     };
+
     res.status(resp.status).json(response);
   } catch (e) {
-    console.group(e)
     res.status(500).json({
       status: 500,
       message: "Fallo en el servicio de Mercado Libre",
@@ -62,7 +66,8 @@ exports.searchId = async (req, res) => {
           amount: resp.data.price,
           decimals: 0
         },
-        picture: resp.data.thumbnail,
+        category: resp.data.category_id,
+        picture: resp.data.pictures[0].url,
         condition: resp.data.condition,
         free_shipping: resp.data.shipping.free_shipping,
         sold_quantity: resp.data.sold_quantity,
@@ -72,31 +77,9 @@ exports.searchId = async (req, res) => {
 
     res.status(resp.status).json(responseUniqueItem);
   } catch (e) {
-    console.log(e);
     res.status(500).json({
       status: 500,
       message: "Fallo en el servicio de Mercado Libre",
     });
   }
-  //sample
-  // {
-  //   “author”: {
-  //   “name”: String
-  //   “lastname”: String
-  //   },
-  //   “item”: {
-  //   "id": String,
-  //   "title": String,
-  //   "price": {
-  //   "currency": String,
-  //   "amount": Number,
-  //   "decimals": Number,
-  //   },
-  //   “picture”: String,
-  //   "condition": String,
-  //   "free_shipping": Boolean,
-  //   "sold_quantity", Number
-  //   "description": String
-  //   }
-  //  }
 };
