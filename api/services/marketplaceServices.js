@@ -9,16 +9,20 @@ exports.search = async (req, res) => {
       `${process.env.API_MERCADO_LIBRE}/sites/MLA/search?limit=${process.env.SEARCH_LIMIT}&q=${itemsSearch}`
     );
 
-    const respCategories = resp.data.filters.find(category => category.id === 'category')
-    const allCategories = respCategories.values[0].path_from_root.map(values => values.name)
+    const respCategories = resp.data.filters.find(category => category.id === 'category');
+    const allCategories = respCategories.values[0].path_from_root.map(values => values.name);
+
+    let decimals = Number.parseFloat(resp.data.price % 1).toFixed(2);
+
+    decimals = parseInt(decimals.toString().substring(2));
 
     const respDataItems = resp.data.results.map((item) => ({
       id: item.id,
       title: item.title,
       price: {
         currency: item.currency_id,
-        amount: item.price,
-        decimals: 0
+        amount: Math.floor(item.price),
+        decimals: decimals
       },
       picture: item.thumbnail,
       condition: item.condition,
@@ -36,6 +40,7 @@ exports.search = async (req, res) => {
 
     res.status(resp.status).json(response);
   } catch (e) {
+    console.log(e)
     res.status(500).json({
       status: 500,
       message: "Fallo en el servicio de Mercado Libre",
@@ -53,6 +58,11 @@ exports.searchId = async (req, res) => {
       `${process.env.API_MERCADO_LIBRE}/items/${id}/description`
     );
 
+    let decimals = Number.parseFloat(resp.data.price % 1).toFixed(2);
+
+    decimals = parseInt(decimals.toString().substring(2));
+
+
     const responseUniqueItem = {
       author: {
         name: "Barbara",
@@ -64,7 +74,7 @@ exports.searchId = async (req, res) => {
         price: {
           currency: resp.data.currency_id,
           amount: resp.data.price,
-          decimals: 0
+          decimals: decimals
         },
         category: resp.data.category_id,
         picture: resp.data.pictures[0].url,
