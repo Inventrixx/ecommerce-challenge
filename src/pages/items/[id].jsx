@@ -33,16 +33,14 @@ export default function ProductId() {
   }, [router.query.id]);
 
   return (
-    <>
+    <div className="product-id-view">
       {!isLoading && (
         <>
           <BreadCrumbs categories={categories} />
-          <section className="product-id-view">
-            <ProductDetail productDetail={productDetail} />
-          </section>
+          <ProductDetail productDetail={productDetail} />
         </>
       )}
-    </>
+    </div>
   );
 }
 

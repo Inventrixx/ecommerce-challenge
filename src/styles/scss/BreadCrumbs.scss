@@ -1,19 +1,33 @@
-$breadcrumb-color: #666666;
+@import './main.scss';
 
 .breadCrumbs {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: $breadcrumb-color;
+    margin: 8px;
 
     .breadCrumbs-content {
         margin-left: 8px;
 
         .category-name {
             padding: 2px;
+            font-size: 0.8em;
         }
 
         span+span::before {
             margin: 2px;
             content: '>'
+        }
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1600px) {
+    .breadCrumbs {
+        width: 72%;
+        font-size: 1rem;
+
+        .category-name {
+            font-size: 0.6em;
         }
     }
 }

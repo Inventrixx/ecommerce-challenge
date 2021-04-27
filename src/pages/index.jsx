@@ -1,16 +1,10 @@
-import Head from "next/head";
+import React from "react";
+// import Layout from "../components/MyLayout";
 import SearchBox from "../components/SearchBox";
+import MyLayout from "../components/MyLayout";
 
 export default function Home() {
-  return (
-    <>
-      <div>
-        <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-      </div>
-      <SearchBox />
-    </>
-  );
+  return <>{/* <SearchBox /> */}</>;
 }
+
+Home.Layout = MyLayout;

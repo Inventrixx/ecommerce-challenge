@@ -1,65 +1,59 @@
-$navbar-bg: #FFE600;
-$placeholderText: #999999;
-$search-icon-bg: #EEEEEE;
-$shadow: rgba(0, 0, 0, .1);
-$small: 300px;
-$medium: 900px;
+@import './main.scss';
 
 
-@media screen and (min-width: $small) {
+.navbar-section {
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: $navbar-bg;
+    font-size: 1rem;
+    height: 6vh;
 
-
-    .navbar-section {
+    .logo-container {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: auto;
-        background-color: $navbar-bg;
-        height: 6vh;
-
-        .logo-container {
-            display: flex;
-            justify-content: center;
-        }
 
         .logo-item {
             width: 50%;
         }
+    }
+
+    .input-container {
+        margin-left: 5px;
+        display: flex;
+        height: 5vh;
+        width: 100%;
 
 
-        .input-container {
-            width: 100%;
-            margin-left: 5px;
+        .searchbox-form {
             display: flex;
+            width: 90%;
+
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+
+            .input-item {
+                -webkit-appearance: none;
+                font-size: 1.2em;
+                width: 80%;
+                outline: none;
+                border: none;
+                line-height: 10pt;
+                padding-top: 5px;
+                padding-bottom: 7px;
+                padding-left: 15px;
+                font-size: 1em;
+                width: 90%;
 
 
-            .searchbox-form {
-                width: 75%;
-                box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
-
-
-                .input-item {
-                    -webkit-appearance: none;
-                    outline: none;
-                    border: none;
-                    line-height: 10pt;
-                    padding-top: 5px;
-                    padding-bottom: 7px;
-                    padding-left: 15px;
-                    font-size: 1em;
-                    height: 4vh;
-                    width: 100%;
-
-
-                    &::placeholder {
-                        color: $placeholderText;
-                    }
+                &::placeholder {
+                    color: $placeholderText;
                 }
             }
 
             .search-icon-container {
-                width: 10%;
+                width: 20%;
                 display: flex;
                 align-content: center;
                 justify-content: center;
@@ -69,21 +63,74 @@ $medium: 900px;
 
                 .search-icon-button {
                     border: none;
+                    display: flex;
+                    justify-content: center;
 
-
-                    .search-icon {
-                        width: 35%;
+                    img {
+                        width: 70%;
                     }
+
+
 
                 }
 
 
             }
 
+        }
+    }
 
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1600px) {
+
+
+    .navbar-section {
+        height: 8vh;
+
+        .logo-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 25%;
         }
 
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+            img {
+                width: 35%;
+            }
+        }
+
+        .input-container {
+            height: 6vh;
+
+            .searchbox-form {
+                display: flex;
+                width: 85%;
+
+                .input-item {
+                    width: 90%;
+
+                }
+
+                .search-icon-container {
+                    width: 10%;
+
+                    .search-icon-button {
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
 }

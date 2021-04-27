@@ -20,16 +20,11 @@ export default function ProductsList({ products }) {
             onClick={(e) => onClickToItemId(e, product.id)}
           >
             <div className="product-img-container">
-              <img
-                className="product-img"
-                src={product.picture}
-                height="auto"
-                width="180px"
-              />
+              <img className="product-img" src={product.picture} />
             </div>
             <div className="product-header">
-              <span className="product-price">${product.price.amount}</span>
-              <span className="product-title">{product.title}</span>
+              <h2 className="product-price">${product.price.amount}</h2>
+              <h4 className="product-title">{product.title}</h4>
             </div>
           </div>
         );

@@ -46,16 +46,16 @@ const SearchBox = ({ value }) => {
             type="text"
             placeholder="Nunca dejes de buscar"
           />
+          <div className="search-icon-container">
+            <button
+              type="submit"
+              className="search-icon-button"
+              onClick={handleSearch}
+            >
+              <img className="search-icon" src="/search-icon.png" />
+            </button>
+          </div>
         </form>
-        <div className="search-icon-container">
-          <button
-            type="submit"
-            className="search-icon-button"
-            onClick={handleSearch}
-          >
-            <img className="search-icon" src="/search-icon.png" />
-          </button>
-        </div>
       </div>
     </section>
   );

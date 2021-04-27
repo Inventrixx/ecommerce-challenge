@@ -1,57 +1,129 @@
-@media screen and (min-width: 300px) {
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EEEEEE;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.navbar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background-color: #FFE600;
+  font-size: 1rem;
+  height: 6vh;
+}
+.navbar-section .logo-container {
+  display: flex;
+  justify-content: center;
+}
+.navbar-section .logo-container .logo-item {
+  width: 50%;
+}
+.navbar-section .input-container {
+  margin-left: 5px;
+  display: flex;
+  height: 5vh;
+  width: 100%;
+}
+.navbar-section .input-container .searchbox-form {
+  display: flex;
+  width: 90%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-section .input-container .searchbox-form .input-item {
+  -webkit-appearance: none;
+  font-size: 1.2em;
+  width: 80%;
+  outline: none;
+  border: none;
+  line-height: 10pt;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  font-size: 1em;
+  width: 90%;
+}
+.navbar-section .input-container .searchbox-form .input-item::placeholder {
+  color: #999999;
+}
+.navbar-section .input-container .searchbox-form .search-icon-container {
+  width: 20%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-section .input-container .searchbox-form .search-icon-container .search-icon-button {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.navbar-section .input-container .searchbox-form .search-icon-container .search-icon-button img {
+  width: 70%;
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
   .navbar-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    background-color: #FFE600;
-    height: 6vh;
+    height: 8vh;
   }
   .navbar-section .logo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 25%;
   }
-  .navbar-section .logo-item {
-    width: 50%;
-  }
-  .navbar-section .input-container {
-    width: 100%;
-    margin-left: 5px;
+  .navbar-section a {
     display: flex;
-  }
-  .navbar-section .input-container .searchbox-form {
-    width: 75%;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  }
-  .navbar-section .input-container .searchbox-form .input-item {
-    -webkit-appearance: none;
-    outline: none;
-    border: none;
-    line-height: 10pt;
-    padding-top: 5px;
-    padding-bottom: 7px;
-    padding-left: 15px;
-    font-size: 1em;
-    height: 4vh;
-    width: 100%;
-  }
-  .navbar-section .input-container .searchbox-form .input-item::placeholder {
-    color: #999999;
-  }
-  .navbar-section .input-container .search-icon-container {
-    width: 10%;
-    display: flex;
-    align-content: center;
     justify-content: center;
     align-items: center;
-    background-color: #EEEEEE;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   }
-  .navbar-section .input-container .search-icon-container .search-icon-button {
-    border: none;
-  }
-  .navbar-section .input-container .search-icon-container .search-icon-button .search-icon {
+  .navbar-section a img {
     width: 35%;
+  }
+  .navbar-section .input-container {
+    height: 6vh;
+  }
+  .navbar-section .input-container .searchbox-form {
+    display: flex;
+    width: 85%;
+  }
+  .navbar-section .input-container .searchbox-form .input-item {
+    width: 90%;
+  }
+  .navbar-section .input-container .searchbox-form .search-icon-container {
+    width: 10%;
+  }
+  .navbar-section .input-container .searchbox-form .search-icon-container .search-icon-button img {
+    width: 50%;
   }
 }
 

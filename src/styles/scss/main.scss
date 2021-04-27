@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+$navbar-bg: #FFE600;
+$placeholderText: #999999;
+$breadcrumb-color: #666666;
+$search-icon-bg: #EEEEEE;
+$shadow: rgba(0, 0, 0, .1);
+$button-bg: #3483FA;
+$small: 300px;
+$medium: 900px;
+$big: 1200px;
 
 
 html,
@@ -6,6 +15,20 @@ body {
     padding: 0;
     margin: 0;
     background-color: #EEEEEE;
+    font-size: 17px;
+}
+
+
+@media (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
 }
 
 a {

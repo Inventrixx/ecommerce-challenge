@@ -32,9 +32,7 @@ export default function ProductsIndex() {
     <section className="products-index">
       {searchResults && (
         <>
-          <section className="products-breadcrumbs">
-            <BreadCrumbs categories={searchResults.categories} />
-          </section>
+          <BreadCrumbs categories={searchResults.categories} />
           <ProductsList products={searchResults} />
         </>
       )}

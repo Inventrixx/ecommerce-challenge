@@ -1,16 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EEEEEE;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
 .breadCrumbs {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #666666;
+  margin: 8px;
 }
 .breadCrumbs .breadCrumbs-content {
   margin-left: 8px;
 }
 .breadCrumbs .breadCrumbs-content .category-name {
   padding: 2px;
+  font-size: 0.8em;
 }
 .breadCrumbs .breadCrumbs-content span + span::before {
   margin: 2px;
   content: ">";
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+  .breadCrumbs {
+    width: 72%;
+    font-size: 1rem;
+  }
+  .breadCrumbs .category-name {
+    font-size: 0.6em;
+  }
 }
 
 /*# sourceMappingURL=BreadCrumbs.css.map */

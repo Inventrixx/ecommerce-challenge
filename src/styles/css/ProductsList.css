@@ -1,27 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EEEEEE;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
 .product-content {
   display: flex;
   margin-left: 8px;
   margin-right: 8px;
   background-color: white;
   cursor: pointer;
-  border-bottom: #dadada;
+  border-bottom: 1.5px solid #dadada;
 }
 .product-content .product-img-container {
-  margin-right: 8px;
+  width: 70%;
+  margin: 8px;
+}
+.product-content .product-img-container img {
+  width: 100px;
+  border-radius: 4px;
 }
 .product-content .product-header {
   margin-right: 8px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: column;
+  font-size: 1.5rem;
 }
 .product-content .product-header .product-price {
   margin-bottom: 8px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 .product-content .product-header .product-title {
   margin-top: 8px;
-  font-size: 1em;
+  font-size: 0.7em;
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+  .products-list-container {
+    width: 72%;
+  }
+  .products-list-container .product-content {
+    font-size: 1rem;
+  }
+  .products-list-container .product-content .product-img-container {
+    width: 20%;
+  }
+  .products-list-container .product-content .product-img-container img {
+    width: 180px;
+  }
+  .products-list-container .product-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .products-list-container .product-header .product-price {
+    font-size: 1em;
+  }
+  .products-list-container .product-header .product-title {
+    font-size: 0.6em;
+  }
 }
 
 /*# sourceMappingURL=ProductsList.css.map */
