@@ -83,6 +83,11 @@ ul li {
   }
   .products-list-container .product-header .product-price {
     font-size: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .products-list-container .product-header .product-price .product-free-shipping {
+    margin-left: 20px;
   }
   .products-list-container .product-header .product-title {
     font-size: 0.6em;

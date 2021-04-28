@@ -63,6 +63,12 @@
 
             .product-price {
                 font-size: 1em;
+                display: flex;
+                align-items: center;
+
+                .product-free-shipping {
+                    margin-left: 20px;
+                }
 
             }
 
