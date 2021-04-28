@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "nodemon server.js",
+    "cy:open": "cypress open",
+    "tests": "cypress run",
+    "coverage": "npx nyc report --reporter=text-summary",
     "build": "next build",
     "start": "next start"
   },
@@ -16,14 +19,30 @@
     "sass": "^1.32.11"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.5",
+    "babel-plugin-istanbul": "^6.0.0",
+    "cypress": "^7.2.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.23.2",
     "nodemon": "^2.0.7"
+  },
+  "nyc": {
+    "all": true,
+    "extension": [
+      ".js",
+      ".jsx"
+    ],
+    "branches": 62,
+    "lines": 80,
+    "functions": 71,
+    "statements": 79
   }
 }

@@ -1,0 +1,9 @@
+{
+    "baseUrl": "http://localhost:8080",
+    "testFiles": [
+        "searchProducts.js",
+        "api/serviceTest.js"
+    ],
+    "video": false,
+    "chromeWebSecurity": false
+}

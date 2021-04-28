@@ -1,23 +1,23 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true,
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: "module",
   },
-  plugins: [
-    'react',
-    'prettier'
-  ],
+  plugins: ["react", "prettier"],
   extends: [
-    "prettier"
+    "prettier",
+    "plugin:cypress/recommended",
+    "plugin:chai-friendly/recommended",
   ],
   rules: {
-    "prettier/prettier": "error"
-  }
-}
+    "prettier/prettier": "error",
+  },
+};
