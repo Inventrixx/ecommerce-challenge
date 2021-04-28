@@ -9,6 +9,9 @@
 /coverage
 cypress/screenshots
 
+# nyc test coverage
+.nyc_output
+
 
 # next.js
 /.next/
