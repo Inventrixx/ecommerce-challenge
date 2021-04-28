@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MeLi Challenge!
 
-## Getting Started
+Hello There! This little project is about to do like a mini-[MercadoLibre](https://www.mercadolibre.com.ar/), to retrieve the products that match and showing in our page.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
+Writing on the search bar will lead to show four items that matched the search.
+We can click on whatever product we want and will lead to another page, showing the product
+with more details.
+
+## Instructions
+
+To run the aplication you need to go through this steps:
+
+```
+- git clone repo
+- at /ecommerce-challenge npm i
+- npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+For running the tests you can run the command:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+npm run tests
+or
+npm run cy:open <- opens the cypress window
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## This project is made with:
 
-## Learn More
+```
+- NextJS
+- Express
+- Sass
+- Cypress
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Finish!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+And thats it! If you got here, thanks for reading!
