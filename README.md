@@ -15,6 +15,7 @@ To run the aplication you need to go through this steps:
 ```
 - git clone repo
 - at /ecommerce-challenge npm i
+- cp .env.example .env
 - npm run dev
 ```
 

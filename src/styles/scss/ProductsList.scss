@@ -27,7 +27,16 @@
 
         .product-price {
             margin-bottom: 8px;
-            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+
+            h2 {
+                font-size: 1em;
+            }
+
+            .product-free-shipping {
+                margin-left: 10px;
+            }
         }
 
         .product-title {
@@ -59,7 +68,7 @@
         .product-header {
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: flex-start;
 
             .product-price {
                 font-size: 1em;

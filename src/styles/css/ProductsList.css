@@ -56,7 +56,14 @@ ul li {
 }
 .product-content .product-header .product-price {
   margin-bottom: 8px;
-  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+}
+.product-content .product-header .product-price h2 {
+  font-size: 1em;
+}
+.product-content .product-header .product-price .product-free-shipping {
+  margin-left: 10px;
 }
 .product-content .product-header .product-title {
   margin-top: 8px;
@@ -79,7 +86,7 @@ ul li {
   .products-list-container .product-header {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
   }
   .products-list-container .product-header .product-price {
     font-size: 1em;
